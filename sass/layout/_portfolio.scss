@@ -1,0 +1,111 @@
+.options-btn {
+  font-family: inherit;
+  color: inherit;
+  letter-spacing: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+
+  padding: 6px 22px;
+
+  background-color: var(--team-bgr-color);
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    color: var(--add-font-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.options-list {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.options-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+}
+
+.projects-item {
+  width: 370px;
+  margin: 15px;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+
+.projects-link:hover,
+.projects-link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.add-text {
+  position: relative;
+  overflow: hidden;
+}
+
+.text-info {
+  position: absolute;
+  top: 0px;
+  height: 100%;
+  padding: 63px 24px;
+
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--add-font-color);
+  background-color: rgba(33, 150, 243, 0.9);
+
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .projects-link:hover &,
+  .projects-link:focus & {
+    transform: translateY(0%);
+  }
+
+  .projects-item:hover &,
+  .projects-item:focus & {
+    transform: translateY(0%);
+  }
+}
+
+.projects-heading {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  margin-bottom: 4px;
+}
+
+.projects-item .projects-text {
+  font-size: 16px;
+  line-height: 1.88;
+
+  color: var(--text-font-color);
+}
+
+.projects-description {
+  border: 1px solid var(--portfolio-borders);
+  border-top: none;
+  padding: 20px 24px;
+}
