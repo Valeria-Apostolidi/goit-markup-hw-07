@@ -1,3 +1,9 @@
+.email-btn, .explanation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 :root {
   --add-color: #2f303a;
   --accent-color: #2196f3;
@@ -13,6 +19,14 @@
   --footer-icon-color: rgba(255, 255, 255, 0.1);
 }
 
+body {
+  font-family: "Roboto", sans-serif;
+  color: var(--main-font-color);
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  background-color: var(--add-font-color);
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -24,14 +38,6 @@
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-
-body {
-  font-family: "Roboto", sans-serif;
-  color: var(--main-font-color);
-  font-size: 14px;
-  letter-spacing: 0.03em;
-  background-color: var(--add-font-color);
 }
 
 img {
@@ -66,8 +72,8 @@ p {
 
 .btn {
   font-family: inherit;
-  font-weight: 700;
   font-size: 16px;
+  font-weight: 700;
   line-height: 1.88;
   letter-spacing: 0.06em;
   cursor: pointer;
@@ -115,8 +121,8 @@ p {
 
 .logo {
   font-family: "Raleway";
-  font-weight: 700;
   font-size: 26px;
+  font-weight: 700;
   line-height: 1.19;
   color: var(--logo-color);
 }
@@ -213,12 +219,12 @@ p {
 }
 
 .hero-title {
-  font-weight: 900;
-  width: 696px;
-  margin: 0 auto;
   font-size: 44px;
+  font-weight: 900;
   line-height: 1.36;
   letter-spacing: 0.06em;
+  width: 696px;
+  margin: 0 auto;
   text-transform: uppercase;
   color: var(--add-font-color);
   margin-bottom: 30px;
@@ -239,8 +245,8 @@ p {
 }
 
 .strength-title {
-  font-weight: 700;
   font-size: 14px;
+  font-weight: 700;
   line-height: 1.14;
   text-align: Left;
   text-transform: uppercase;
@@ -260,8 +266,8 @@ p {
 }
 
 .heading {
-  font-weight: 700;
   font-size: 36px;
+  font-weight: 700;
   line-height: 1.17;
   margin-bottom: 50px;
   text-align: center;
@@ -293,9 +299,6 @@ p {
   text-align: center;
   width: 100%;
   height: 70px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   color: var(--add-font-color);
   text-transform: uppercase;
   background-color: rgba(47, 48, 58, 0.8);
@@ -310,8 +313,8 @@ p {
 }
 
 .team-title {
-  font-weight: 500;
   font-size: 16px;
+  font-weight: 500;
   line-height: 1.19;
   margin-bottom: 10px;
 }
@@ -431,6 +434,11 @@ p {
   line-height: 1.71;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.address-link:hover, .address-link:focus,
+.contacts-link:hover,
+.contacts-link:focus {
+  color: var(--accent-color);
+}
 
 .address-link {
   color: var(--add-font-color);
@@ -444,15 +452,8 @@ p {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.address-link:hover,
-.address-link:focus,
-.contacts-link:hover,
-.contacts-link:focus {
-  color: var(--accent-color);
-}
-
 .media-header {
-  font-size: inherit;
+  font-size: 400;
   font-weight: 700;
   line-height: 16px;
   letter-spacing: 0.03em;
@@ -523,9 +524,6 @@ p {
 }
 
 .email-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding-left: 29px;
   padding-right: 28px;
   width: 200px;
@@ -540,10 +538,10 @@ p {
 .options-btn {
   font-family: inherit;
   color: inherit;
-  letter-spacing: inherit;
-  font-weight: 500;
   font-size: 16px;
+  font-weight: 500;
   line-height: 1.62;
+  letter-spacing: inherit;
   padding: 6px 22px;
   background-color: var(--team-bgr-color);
   cursor: pointer;
@@ -612,8 +610,8 @@ p {
 }
 
 .projects-heading {
-  font-weight: 700;
   font-size: 18px;
+  font-weight: 700;
   line-height: 2;
   margin-bottom: 4px;
 }

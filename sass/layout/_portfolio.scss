@@ -1,10 +1,7 @@
 .options-btn {
   font-family: inherit;
   color: inherit;
-  letter-spacing: inherit;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.62;
+  @include font(16px, 500, 1.62, inherit);
 
   padding: 6px 22px;
 
@@ -71,8 +68,7 @@
   height: 100%;
   padding: 63px 24px;
 
-  font-size: 18px;
-  line-height: 28px;
+  @include font(18px, null, 28px, null);
   color: var(--add-font-color);
   background-color: rgba(33, 150, 243, 0.9);
 
@@ -91,16 +87,12 @@
 }
 
 .projects-heading {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2;
+  @include font(18px, 700, 2, null);
   margin-bottom: 4px;
 }
 
 .projects-item .projects-text {
-  font-size: 16px;
-  line-height: 1.88;
-
+  @include font(16px, null, 1.88, null);
   color: var(--text-font-color);
 }
 
