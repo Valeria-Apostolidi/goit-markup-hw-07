@@ -6,3 +6,9 @@
 .item:first-child {
   margin-left: 0px;
 }
+
+.heading {
+  @include font(36px, 700, 1.17, null);
+  margin-bottom: 50px;
+  text-align: center;
+}

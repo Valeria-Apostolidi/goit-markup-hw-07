@@ -2,20 +2,20 @@
   padding-top: 0;
 }
 
-.specification-list {
+.services {
   display: flex;
 }
 
-.specification-list > .item {
+.services > .services__item {
   width: calc((100% - 60px) / 3);
   position: relative;
 }
 
-.specification-list > .item:not(:last-child) {
+.services > .services__item:not(:last-child) {
   margin-right: 30px;
 }
 
-.explanation {
+.services__name {
   position: absolute;
   left: 0;
   bottom: 0;

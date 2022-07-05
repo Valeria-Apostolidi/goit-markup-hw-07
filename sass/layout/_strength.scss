@@ -1,8 +1,8 @@
-.strength .strength-list {
+.strength .features {
   display: flex;
 }
 
-.strength-icon-bg {
+.features__icon-bg {
   width: 270px;
   height: 120px;
   background: var(--team-bgr-color);
@@ -12,7 +12,7 @@
   margin-bottom: 30px;
 }
 
-.strength-title {
+.features__title {
   @include font(14px, 700, 1.14, null);
   text-align: Left;
   text-transform: uppercase;
@@ -20,21 +20,15 @@
   margin-bottom: 10px;
 }
 
-.strength-item {
+.features__item {
   width: calc((100% - 90px) / 4);
   &:not(:last-child) {
     margin-right: 30px;
   }
 }
 
-.strength-text {
+.features__text {
   line-height: 1.71;
 
   color: var(--text-font-color);
-}
-
-.heading {
-  @include font(36px, 700, 1.17, null);
-  margin-bottom: 50px;
-  text-align: center;
 }
