@@ -2,6 +2,11 @@
   padding-top: 0;
 }
 
+@media screen and (max-width: 1200px) {
+  .specification {
+    display: none;
+  }
+}
 .services {
   display: flex;
 }

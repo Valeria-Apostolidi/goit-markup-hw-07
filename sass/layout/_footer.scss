@@ -5,8 +5,16 @@
 }
 
 .footer .container {
-  display: flex;
-  align-items: baseline;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      align-items: baseline;
+    }
+  }
 }
 
 .footer .logo {
@@ -14,7 +22,12 @@
 }
 
 .container-address {
-  margin-right: 70px;
+  text-align: center;
+  margin-bottom: 60px;
+  @media screen and (min-width: 1200px) {
+    margin-right: 70px;
+    margin-bottom: 0;
+  }
 }
 
 .address-link,
@@ -33,12 +46,25 @@
   color: var(--add-font-color);
 }
 
-.address-item:not(:last-child) {
-  margin-bottom: 9px;
+.address-list {
+  gap: 8px;
+
+  @media screen and (min-width: 1200px) {
+    gap: 9px;
+  }
 }
 
 .contacts-link {
   color: rgba(255, 255, 255, 0.6);
+}
+
+.container-media {
+  text-align: center;
+  margin-bottom: 60px;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
+    text-align: start;
+  }
 }
 
 .media-header {
@@ -51,10 +77,7 @@
 .media-list {
   display: flex;
   justify-content: center;
-}
-
-.media-item:not(:last-child) {
-  margin-right: 10px;
+  gap: 10px;
 }
 
 .media-link {
@@ -78,22 +101,27 @@
 }
 
 .subscribe-form {
-  display: flex;
-  width: 570px;
+  width: 100%;
   height: 86px;
   flex-wrap: wrap;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    width: 570px;
+  }
 }
 
 .email-accept {
-  margin-left: auto;
-}
-
-.email-news {
-  width: 100%;
+  text-align: center;
+  @media screen and (min-width: 1200px) {
+    margin-left: auto;
+    text-align: start;
+  }
 }
 
 .email-info {
-  width: 358px;
+  width: 450px;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   color: var(--add-font-color);
@@ -101,7 +129,11 @@
   border-radius: 4px;
   padding-left: 16px;
   background-color: transparent;
-  margin-right: 12px;
+  margin-bottom: 20px;
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+    margin-right: 12px;
+  }
 }
 
 .email-info::placeholder {
@@ -115,6 +147,14 @@
   padding-right: 28px;
   width: 200px;
   height: 50px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 .email-btn-icon {
   fill: var(--add-font-color);
