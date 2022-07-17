@@ -150,6 +150,8 @@
             </li>
             <li class="services__item item">
               <img
+                srcset="./images/work2.jpeg 1px, 
+                ./images/work2-2x.jpeg 2px"
                 src="./images/work2.jpg"
                 alt="Синхронизация с ноутбуком"
                 width="370"
@@ -157,7 +159,13 @@
               <p class="services__name">Мобильные приложения</p>
             </li>
             <li class="services__item item">
-              <img src="./images/work3.jpg" alt="Палитра цветов" width="370" />
+              <img
+                srcset="./images/work3.jpeg 1px, 
+                ./images/work3-2x.jpeg 2px"
+                src="./images/work3.jpg"
+                alt="Палитра цветов"
+                width="370"
+              />
               <p class="services__name">Дизайнерские решения</p>
             </li>
           </ul>
@@ -170,12 +178,39 @@
           <h2 class="heading">Наша команда</h2>
           <ul class="members list">
             <li class="members__item">
-              <img
-                src="./images/demiyanenko.jpg"
-                alt="Игорь Демьяненко"
-                width="270"
-                class="members__image"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/demiyanenko.jpeg    1x,
+                    ./images/demiyanenko-2x.jpeg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  alt="Игорь Демьяненко"
+                />
+                <source
+                  srcset="
+                    ./images/demiyanenko-tablet.jpeg 1x,
+                    ./images/demiyanenko-tablet.jpeg 2x
+                  "
+                  media="(min-width: 768px)"
+                  alt="Игорь Демьяненко"
+                />
+                <source
+                  srcset="
+                    ./img/gallery-img-1-mob.jpeg    1x,
+                    ./img/gallery-img-1-mob-2x.jpeg 2x
+                  "
+                  media="(min-width: 320px)"
+                  alt="Игорь Демьяненко"
+                />
+
+                <img
+                  src="./images/demiyanenko.jpg"
+                  alt="Игорь Демьяненко"
+                  width="270"
+                  class="members__image"
+                />
+              </picture>
               <div class="member-info">
                 <h3 class="member-info__name">Игорь Демьяненко</h3>
                 <p lang="en" class="member-info__position">Product Designer</p>
