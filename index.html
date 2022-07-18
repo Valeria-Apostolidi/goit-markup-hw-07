@@ -19,8 +19,8 @@
   </head>
   <body>
     <!--верхушка сайта-->
-    <!-- <header class="header">
-      <div class="container">
+    <header class="header">
+      <div class="container header__container">
         <nav class="nav">
           <a class="logo link-l" href="./index.html" lang="en"
             ><span class="logo__word logo__word--color">Web</span>Studio</a
@@ -61,7 +61,84 @@
           </li>
         </ul>
       </div>
-    </header> -->
+
+      <!-- MOBILE MENU -->
+      <div class="container mob-menu">
+        <div class="mobile-header">
+          <a class="logo link-l" href="./index.html" lang="en"
+            ><span class="logo__word logo__word--color">Web</span>Studio</a
+          >
+          <button type="button" class="btn-menu-open">
+            <svg class="menu-icon" width="40" height="40">
+              <use href="./symbol-defs.svg#icon-menu_40px"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="site-menu is-hidden">
+          <div class="additional-container-top">
+            <button class="btn-menu-close">
+              <svg class="menu-icon" width="40" height="40">
+                <use href="./symbol-defs-1.svg#icon-close-btn"></use>
+              </svg>
+            </button>
+            <ul class="site-menu__list list">
+              <li class="item site-menu__item">
+                <a class="site-menu__link link current" href="./index.html"
+                  >Студия</a
+                >
+              </li>
+              <li class="item site-menu__item">
+                <a class="site-menu__link link" href="./portfolio.html"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="item site-menu__item">
+                <a class="site-menu__link link" href="">Контакты</a>
+              </li>
+            </ul>
+          </div>
+          <div class="additional-container-bottom">
+            <ul class="list menu-contacts">
+              <li class="item menu-contacts__item menu-contacts__item-tell">
+                <a class="menu-contacts__link link" href="tel:+380961111111">
+                  <svg class="menu-contacts__icon" width="10" height="16">
+                    <use href="./symbol-defs.svg#icon-phone"></use>
+                  </svg>
+                  +38 096 111 11 11</a
+                >
+              </li>
+              <li class="item menu-contacts__item menu-contacts__item-email">
+                <a
+                  class="menu-contacts__link link"
+                  href="mailto:info@devstudio.com"
+                >
+                  <svg class="menu-contacts__icon" width="16" height="12">
+                    <use href="./symbol-defs.svg#icon-envelope"></use>
+                  </svg>
+                  info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="media-links list">
+              <li class="media-links__item instagram">
+                <a href="" class="media-links__link link" lang="en"
+                  >Instagram</a
+                >
+              </li>
+              <li class="media-links__item twitter">
+                <a href="" class="media-links__link link" lang="en">Twitter</a>
+              </li>
+              <li class="media-links__item facebook">
+                <a href="" class="media-links__link link" lang="en">Facebook</a>
+              </li>
+              <li class="media-links__item">
+                <a href="" class="media-links__link link" lang="en">Linkedin</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
 
     <!--Main body-->
     <main>
@@ -184,22 +261,23 @@
                     ./images/demiyanenko.jpg    1x,
                     ./images/demiyanenko-2x.jpg 2x
                   "
-                  media="(min-width: 1200px)"
+                  media="(min-width: 270px)"
                 />
                 <source
                   srcset="
-                    ./images/demiyanenko-tablet.jpg 1x,
-                    ./images/demiyanenko-tablet.jpg 2x
+                    ./images/demiyanenko-tablet.jpg    1x,
+                    ./images/demiyanenko-tablet-2x.jpg 2x
                   "
-                  media="(min-width: 768px)"
+                  media="(min-width: 354px)"
                 />
                 <source
                   srcset="
                     ./images/demiyanenko-mob.jpg    1x,
                     ./images/demiyanenko-mob-2x.jpg 2x
                   "
-                  media="(min-width: 480px)"
-                  <img
+                  media="(min-width: 450px)"
+                />
+                <img
                   src="./images/demiyanenko.jpg"
                   width="270"
                   alt="Игорь Демьяненко"
@@ -243,12 +321,33 @@
               </div>
             </li>
             <li class="members__item">
-              <img
-                src="./images/repina.jpg"
-                alt="Ольга Репина"
-                width="270"
-                class="members__image"
-              />
+              <picture>
+                <source
+                  srcset="./images/repina.jpg 1x, ./images/repina-2x.jpg 2x"
+                  media="(min-width: 270px)"
+                />
+                <source
+                  srcset="
+                    ./images/repina-tablet.jpg    1x,
+                    ./images/repina-tablet-2x.jpg 2x
+                  "
+                  media="(min-width: 354px)"
+                />
+                <source
+                  srcset="
+                    ./images/repina-mob.jpg    1x,
+                    ./images/repina-mob-2x.jpg 2x
+                  "
+                  media="(min-width: 450px)"
+                />
+                <img
+                  src="./images/repina.jpg"
+                  alt="Ольга Репина"
+                  width="270"
+                  class="members__image"
+                />
+              </picture>
+
               <div class="member-info">
                 <h3 class="member-info__name">Ольга Репина</h3>
                 <p lang="en" class="member-info__position">
@@ -287,12 +386,33 @@
               </div>
             </li>
             <li class="members__item">
-              <img
-                src="./images/tarasov.jpg"
-                alt="Николай Тарасов"
-                width="270"
-                class="members__image"
-              />
+              <picture>
+                <source
+                  srcset="./images/tarasov.jpg 1x, ./images/tarasov-2x.jpg 2x"
+                  media="(min-width: 270px)"
+                />
+                <source
+                  srcset="
+                    ./images/tarasov-tablet.jpg    1x,
+                    ./images/tarasov-tablet-2x.jpg 2x
+                  "
+                  media="(min-width: 354px)"
+                />
+                <source
+                  srcset="
+                    ./images/tarasov-mob.jpg    1x,
+                    ./images/tarasov-mob-2x.jpg 2x
+                  "
+                  media="(min-width: 450px)"
+                />
+                <img
+                  src="./images/tarasov.jpg"
+                  alt="Николай Тарасов"
+                  width="270"
+                  class="members__image"
+                />
+              </picture>
+
               <div class="member-info">
                 <h3 class="member-info__name">Николай Тарасов</h3>
                 <p lang="en" class="member-info__position">Marketing</p>
@@ -329,12 +449,33 @@
               </div>
             </li>
             <li class="members__item">
-              <img
-                src="./images/ermakov.jpg"
-                alt="Михаил Ермаков"
-                width="270"
-                class="members__image"
-              />
+              <picture>
+                <source
+                  srcset="./images/ermakov.jpg 1x, ./images/ermakov-2-2x.jpg 2x"
+                  media="(min-width: 270px)"
+                />
+                <source
+                  srcset="
+                    ./images/ermakov-tablet.jpg    1x,
+                    ./images/ermakov-tablet-2x.jpg 2x
+                  "
+                  media="(min-width: 354px)"
+                />
+                <source
+                  srcset="
+                    ./images/ermakov-mob.jpg     1x,
+                    ./images/ermakov-mob-2px.jpg 2x
+                  "
+                  media="(min-width: 450px)"
+                />
+                <img
+                  src="./images/ermakov.jpg"
+                  alt="Михаил Ермаков"
+                  width="270"
+                  class="members__image"
+                />
+              </picture>
+
               <div class="member-info">
                 <h3 class="member-info__name">Михаил Ермаков</h3>
                 <p lang="en" class="member-info__position">UI Designer</p>
@@ -594,5 +735,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
